@@ -1,0 +1,31 @@
+# Web Framework
+Flask==3.0.3
+
+# Database ORM
+Flask-SQLAlchemy==3.1.1
+SQLAlchemy==2.0.36
+
+# Environment Variables
+python-dotenv==1.0.1
+
+# AI Provider — OpenRouter uses the OpenAI SDK (v1.x)
+# >=1.57.0 required: earlier versions pass `proxies` to httpx which was removed in httpx 0.28+
+# <2.0.0 ensures we stay on the v1 SDK (not legacy v3)
+openai>=1.57.0,<2.0.0
+
+# Data Analytics
+# NOTE: pandas 3.x is required for Python 3.14 (no py3.14 wheel exists for pandas 2.x)
+pandas>=3.0.0
+
+# HTTP Requests (utility)
+requests==2.32.3
+
+# Testing
+pytest==8.3.3
+pytest-mock==3.14.0
+
+# Rate Limiting
+Flask-Limiter==3.8.0
+
+# WSGI Server (for production)
+gunicorn==23.0.0
