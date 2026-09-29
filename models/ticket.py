@@ -78,6 +78,28 @@ class Ticket(db.Model):
     # ------------------------------------------------------------------
     # Methods
     # ------------------------------------------------------------------
+    def __init__(
+        self,
+        message: str,
+        category: str,
+        priority: str,
+        sentiment: str,
+        summary: str,
+        suggested_action: str,
+    ) -> None:
+        """
+        Explicit constructor so type-checkers (Pylance/Pyright) recognise
+        the column-backed keyword arguments. SQLAlchemy's declarative base
+        generates this dynamically at runtime, but static analysers cannot
+        see through the metaclass magic without an explicit signature.
+        """
+        self.message = message
+        self.category = category
+        self.priority = priority
+        self.sentiment = sentiment
+        self.summary = summary
+        self.suggested_action = suggested_action
+
     def to_dict(self) -> dict:
         """
         Serialize this Ticket to a plain Python dictionary.
