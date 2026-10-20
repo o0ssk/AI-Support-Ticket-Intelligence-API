@@ -399,24 +399,4 @@ Format:
 
 Logs rotate at 5 MB and keep 3 backup files.
 
----
 
-## Future Improvements
-
-- [ ] JWT Authentication
-- [ ] Pagination (`?page=1&per_page=20`)
-- [ ] Date range filtering
-- [ ] Full-text search across messages
-- [ ] PostgreSQL in production
-- [ ] Docker + Docker Compose
-- [ ] Redis for rate limiting and caching
-- [ ] Background job queue (Celery) for async AI processing
-- [ ] Admin dashboard
-- [ ] Swagger/OpenAPI documentation
-- [ ] CI/CD pipeline (GitHub Actions)
-
----
-
-## Author
-
-Built as a portfolio backend project demonstrating Python, Flask, REST APIs, AI integration, SQLAlchemy, Pandas, and pytest.
